@@ -6,4 +6,4 @@ from pere_fouras_challenge import *
 from utility_functions import *
 
 print(nearest_prime(17))
-print(ChoosePlayer("mael", "jalil", "hey"))
+print(ChoosePlayer("Mael"))
