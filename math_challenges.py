@@ -1,4 +1,6 @@
 from random import *
+from utility_functions import *
+
 def factorial(n) :
     p = 1
     for i in range(1,n+1) :
@@ -6,11 +8,12 @@ def factorial(n) :
     return p
 
 def math_challenge_factorial() :
-    n = randint(10,20)
+    n = randint(1,10)
     print("Math challenge : Calculate {}!".format(n))
     c = int(input("Your answer : "))
     if c == factorial(n) :
         print("Correct! You win a key.")
+        AddKey()
         return True
     else :
         return False
