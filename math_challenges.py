@@ -49,3 +49,34 @@ def math_challenge_prime():
         return True
     print("What a pity, it's wrong!")
     return False
+
+def math_roulette_challenge():
+    L = [randint(1,20) for i in range(5)]
+    op = ["+","-","*"]
+    c = choice(op)
+    print("Numbers of the roulette : {}".format(L))
+    if c == "+" :
+        print("Calculate the sum of all the numbers")
+        k = int(input("Your answer : "))
+        answer = 0
+        for i in L :
+            answer += i
+    elif c == "*" :
+        print("Calculate the product of all the numbers")
+        k = int(input("Your answer : "))
+        answer = 1
+        for i in L:
+            answer *= i
+    else :
+        print("Calculate the difference of all numbers from left to right : ")
+        k = int(input("Your answer : "))
+        answer = L[0]
+        for i in range(1,len(L)) :
+            answer -= L[i]
+    if k == answer :
+        print("That's a good answer, you win a key!")
+        return True
+    print("What a shame, you lost!")
+    return False
+
+
