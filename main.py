@@ -5,6 +5,6 @@ from logical_challenges import *
 from pere_fouras_challenge import *
 from utility_functions import *
 
-print(nearest_prime(17))
-print(ChoosePlayer("Mael"))
+Reset()
+math_challenge_factorial()
 
