@@ -7,3 +7,4 @@ from utility_functions import *
 
 print(nearest_prime(17))
 print(ChoosePlayer("Mael"))
+
