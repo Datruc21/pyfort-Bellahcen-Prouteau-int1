@@ -28,15 +28,24 @@ def is_prime(n) :
     return False
 
 def nearest_prime(n):
-    c = []
+    c = 0
     dis = 100
     for i in range(2,2*n) :
         if is_prime(i) and abs(n-i)<=dis :
-            c.append(i)
+            c = i
             dis = abs(n-i)
-    if len(c)>1 :
-        return c[0],c[1]
-    return c[0]
+    if c != n+dis and is_prime(n+dis):
+        return [c, n+dis]
+    elif c != n-dis and is_prime(n-dis) :
+        return [c, n-dis]
+    return [c,"none"]
 
 def math_challenge_prime():
     n = randint(10,20)
+    print("Find the closest prime number to {}".format(n))
+    c = int(input("Your answer : "))
+    if c in nearest_prime(n) :
+        print("Congrats! You deserve a key !")
+        return True
+    print("What a pity, it's wrong!")
+    return False
