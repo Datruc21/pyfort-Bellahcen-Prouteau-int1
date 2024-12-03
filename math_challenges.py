@@ -15,8 +15,8 @@ def math_challenge_factorial() :
         print("Correct! You win a key.")
         AddKey()
         return True
-    else :
-        return False
+    print("A pity, the answer was {}".format(factorial(n)))
+    return False
 
 def is_prime(n) :
     c = 0
