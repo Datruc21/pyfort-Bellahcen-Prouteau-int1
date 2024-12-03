@@ -29,7 +29,8 @@ def nearest_prime(n):
     dis = 100
     for i in range(2,2*n) :
         if is_prime(i) and abs(n-i)<=dis :
-            c.append(i) ; dis = abs(n-i)
+            c.append(i)
+            dis = abs(n-i)
     if len(c)>1 :
         return c[0],c[1]
     return c[0]
