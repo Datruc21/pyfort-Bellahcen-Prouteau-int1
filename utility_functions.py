@@ -1,4 +1,7 @@
-key = 0
+
+def Reset() :
+    global  key
+    key = 0
 
 def AddKey() :
     global  key
