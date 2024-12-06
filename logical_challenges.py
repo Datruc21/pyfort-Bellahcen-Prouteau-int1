@@ -49,7 +49,7 @@ def initialize() :
     return grid
 
 def turn(player, player_shots_grid, opponent_grid) :
-    if player == 1 : #player's turn
+    if player == 0 : #player's turn
         display_grid(player_shots_grid,"History of your previous shots:")
         print("Your turn captain !")
         a, b = ask_positions()
@@ -67,17 +67,18 @@ def turn(player, player_shots_grid, opponent_grid) :
         print("Game master's turn : ")
         a = randint(0,2)
         b = randint(0,2)
-        while opponent_grid[a][b] == "X" or opponent_grid[a][b] == "." : #To make sure the game master doesn't do the same shot
+        while player_shots_grid[a][b] == "X" or player_shots_grid[a][b] == "." : #To make sure the game master doesn't do the same shot
             a = randint(0, 2)
             b = randint(0,2)
-        print("The game master shot a position {},{}".format(a,b))
+        print("The game master shot at position {},{}".format(a+1,b+1))
         if opponent_grid[a][b] == "B" :
             print("Hit and sunk !")
             opponent_grid[a][b] = " "
-            player_shots_grid[a - 1][b - 1] = "X"
+            player_shots_grid[a][b] = "X"
         else :
             player_shots_grid[a][b] = "."
             print("Missed...")
+    print()
     next_player(player)
 
 def has_won(player_shots_grid):
@@ -91,6 +92,8 @@ def has_won(player_shots_grid):
     return False
 
 def battleship_game() :
+    Game = True
+    print("Each player must place 2 boats on a 3x3 grid.\nBoats are represented by 'B' and missed shots by '.'.\nSunk boats are marked by 'x'.")
     player_grid = initialize()
     player_shot_grid = empty_grid()
     master_grid = empty_grid()
@@ -101,7 +104,22 @@ def battleship_game() :
         a = randint(0, 2)
         b = randint(0, 2)
     master_grid[a][b] = "B"
-    master_shot = empty_grid()
+    master_shot_grid = empty_grid()
+    player = 0
+    while Game :
+        if player == 0 :
+            turn(player,player_shot_grid,master_grid)
+            if has_won(player_shot_grid) :
+                print("The player won !")
+                return True
+        else :
+            turn(player,master_shot_grid,player_grid)
+            if has_won(master_shot_grid) :
+                print("You lost to the game master...")
+                return False
+        player = next_player(player)
+
+
 
 
 
