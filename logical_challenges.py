@@ -12,3 +12,6 @@ def empty_grid() :
         grid.append(l)
     return grid
 
+def display_grid(grid, message) :
+    
+
