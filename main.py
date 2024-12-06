@@ -6,5 +6,9 @@ from pere_fouras_challenge import *
 from utility_functions import *
 
 Reset()
-math_challenge_factorial()
+
+challenge = chance_challenge()
+challenge()
+challenge = math_challenge()
+challenge()
 

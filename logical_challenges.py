@@ -3,5 +3,5 @@ def next_player(n) :
         return 0
     return 1
 
-#je ne comprends pas
+
 
