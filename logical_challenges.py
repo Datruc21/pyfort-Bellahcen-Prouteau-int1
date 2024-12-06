@@ -13,5 +13,6 @@ def empty_grid() :
     return grid
 
 def display_grid(grid, message) :
-    
+    pass
+
 
