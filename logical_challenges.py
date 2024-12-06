@@ -1,3 +1,6 @@
+def test() :
+    a = 5
+    return a
 def next_player(n) :
     if n == 1 :
         return 0
