@@ -1,4 +1,3 @@
-
 def next_player(n) :
     if n == 1 :
         return 0
@@ -12,3 +11,4 @@ def empty_grid() :
             l.append(" ")
         grid.append(l)
     return grid
+
