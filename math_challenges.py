@@ -7,7 +7,7 @@ def factorial(n) : #The function that return the factorial of a number n
         p *= i
     return p
 
-def math_challenge_factorial() :
+def math_challenge_factorial() : #The first challenge
     n = randint(1,10)
     print("Math challenge : Calculate {}!".format(n))
     c = int(input("Your answer : "))
@@ -18,7 +18,7 @@ def math_challenge_factorial() :
     print("A pity, the answer was {}".format(factorial(n)))
     return False
 
-def is_prime(n) :
+def is_prime(n) : #Check whether a number n is prime or not
     c = 0
     for i in range(2,n) :
         if n%i == 0 :
