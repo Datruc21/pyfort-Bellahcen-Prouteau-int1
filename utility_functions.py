@@ -21,6 +21,6 @@ def compose_team():
         player[i]["keys_won"] = 0
 
     for i in range(player_number) : # We check whether there is one leader or not, we will keep the first one if there are many or designate the first player if there is noone.
-
+        i
     print(player)
 
