@@ -1,7 +1,7 @@
 from random import *
 from utility_functions import *
 
-def factorial(n) :
+def factorial(n) : #The function that return the factorial of a number n
     p = 1
     for i in range(1,n+1) :
         p *= i
