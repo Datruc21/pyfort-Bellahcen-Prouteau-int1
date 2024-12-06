@@ -27,7 +27,7 @@ def is_prime(n) : #Check whether a number n is prime or not
         return True
     return False
 
-def nearest_prime(n):
+def nearest_prime(n): #a function that return the nearest prime number to a number n
     c = 0
     dis = 100
     for i in range(2,2*n) :
@@ -40,7 +40,7 @@ def nearest_prime(n):
         return [c, n-dis]
     return [c,"none"]
 
-def math_challenge_prime():
+def math_challenge_prime(): #The second challenge
     n = randint(10,20)
     print("Find the closest prime number to {}".format(n))
     c = int(input("Your answer : "))
@@ -50,7 +50,7 @@ def math_challenge_prime():
     print("What a pity, it's wrong!")
     return False
 
-def math_roulette_challenge():
+def math_roulette_challenge(): # The third math challenge
     L = [randint(1,20) for i in range(5)]
     op = ["+","-","*"]
     c = choice(op)
