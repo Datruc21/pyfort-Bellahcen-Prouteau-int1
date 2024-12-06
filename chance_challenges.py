@@ -44,7 +44,9 @@ def roll_dice_game() :
     print("None of you won, it is a draw, you won't have a key this time")
     return False
 
-challenges = [shell_game, roll_dice_game]
-
 def chance_challenge() :
-    return challenges[randint(0,1)]
+    challenges = [shell_game, roll_dice_game]
+    c =  challenges[randint(0,1)]
+    if c() :
+        return True
+    return False
