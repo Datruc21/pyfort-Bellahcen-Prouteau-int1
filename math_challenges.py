@@ -79,4 +79,7 @@ def math_roulette_challenge(): # The third math challenge
     print("What a shame, you lost!")
     return False
 
+challenges = [math_challenge_factorial, math_challenge_prime, math_roulette_challenge()]
 
+def math_challenge() :
+    return challenges[randint(0,2)]
