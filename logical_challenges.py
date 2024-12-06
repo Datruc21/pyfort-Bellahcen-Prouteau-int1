@@ -4,6 +4,7 @@ def next_player(n) :
         return 0
     return 1
 
+
 def empty_grid() :
     grid = []
     for i in range(3) :
@@ -101,7 +102,6 @@ def battleship_game() :
         b = randint(0, 2)
     master_grid[a][b] = "B"
     master_shot = empty_grid()
-
 
 
 
