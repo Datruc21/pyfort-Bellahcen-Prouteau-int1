@@ -7,8 +7,9 @@ from utility_functions import *
 
 Reset()
 
-challenge = chance_challenge()
-challenge()
 challenge = math_challenge()
+challenge()
+
+challenge = chance_challenge()
 challenge()
 
