@@ -18,7 +18,6 @@ def pere_fouras_riddles():
     riddles = load_ridles("Data\PFRiddles.json")
     challenge = choice(riddles)
     print(challenge)
-    print("Please enter your answer in the following format : the 'answer'")
     print(challenge["question"])
     while tries>0 :
         answer1 = input("Answer : ")
@@ -28,25 +27,25 @@ def pere_fouras_riddles():
                 answer2 += chr(ord(i)+32)
             else :
                 answer2 += i
-
-
-
-        count = 0
-        k = 0
-        while k<len(challenge["answer"]) and k<len(answer2) :
-            if challenge["answer"][k] == answer2[k] or challenge["answer"][k] == chr(ord(answer2[k])-32): #second condition is for the capital letter at the beginning,
-                count += 1                                                                                 #since our whole answer is in lowercase letters
-            k += 1
-
-
-        if count == len(challenge["answer"]):
-            print("That's the good answer, you won a key")
+        question = ""
+        for i in range(4,len(challenge["answer"])) :
+            if 90>=ord(challenge["answer"][i])>=65 :
+                question += chr(ord(challenge["answer"][i])+32)
+            else :
+                question += challenge["answer"][i]
+        if "the " not in answer2 and answer2 == question :  #answer et answer
+            print("Correct, you win a key !")
+            return True
+        elif "the " in answer2 and question in answer2 and abs(len(answer2)-4-len(question)) == 0 :
+            print("Correct, you win a key !")
             return True
         else :
             print("Wrong, try again")
-            tries -= 1
+        tries -= 1
+
     print("Tough luck, the answer was {}".format(challenge["answer"]))
     return False
+
 
 
 
