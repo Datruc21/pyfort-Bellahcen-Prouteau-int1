@@ -1,11 +1,16 @@
+"""         PYFORT by Maël and Jalil
+THe logical challenge module (done by Jalil), used to challenge the contenders with a game of battleship"""
+
 from random import *
 def next_player(n) :
+    """Simply used to change the player's turn"""
     if n == 1 :
         return 0
     return 1
 
 
 def empty_grid() :
+    """Creates your different grids for the game"""
     grid = []
     for i in range(3) :
         l = []
@@ -15,6 +20,7 @@ def empty_grid() :
     return grid
 
 def display_grid(grid, message) :
+    """Show a grid to the player, with a message"""
     print(message)
     print("-------------")
     for i in range(len(grid)) :
@@ -24,6 +30,7 @@ def display_grid(grid, message) :
     print("-------------")
 
 def ask_positions() :
+    """Ask 2 positions between 1 and 3 and check if the given input is correct """
     a = int(input("Number of the row (between 1 and 3) : "))
     while a>3 or a<1 :
         print("Please enter a number between 1 and 3")
@@ -35,6 +42,7 @@ def ask_positions() :
     return a,b
 
 def initialize() :
+    """Create the player's grid and let him place his boats"""
     grid = empty_grid()
     print("Let's place your first boat : ")
     a,b = ask_positions()
@@ -49,6 +57,9 @@ def initialize() :
     return grid
 
 def turn(player, player_shots_grid, opponent_grid) :
+    """Proceed with either the player's turn or the game master's
+    Either way, one will pick 2 integers and shoot at those coordinates
+    Verify on the target's grid if it's a hit or a missed"""
     if player == 0 : #player's turn
         display_grid(player_shots_grid,"History of your previous shots:")
         print("Your turn captain !")
@@ -82,6 +93,7 @@ def turn(player, player_shots_grid, opponent_grid) :
     next_player(player)
 
 def has_won(player_shots_grid):
+    """Verify if one has won, by counting the number of sunk ship"""
     c = 0
     for i in range(3) :
         for j in range(3) :
@@ -92,6 +104,8 @@ def has_won(player_shots_grid):
     return False
 
 def battleship_game() :
+    """Coordinates all the functions above to create a complete game of battleship
+    Return True if the player wins, False otherwise"""
     Game = True
     print("Each player must place 2 boats on a 3x3 grid.\nBoats are represented by 'B' and missed shots by '.'.\nSunk boats are marked by 'x'.")
     player_grid = initialize()
