@@ -16,6 +16,8 @@ def math_challenge_factorial() :#The first challenge
     n = randint(1,10)
     print("Math challenge : Calculate {}!".format(n))
     c = int(input("Your answer : "))
+    while c<0 :
+        c = int(input("Please enter a positive integer : "))
     if c == factorial(n) :
         print("Correct! You win a key.")
         return True
@@ -53,6 +55,8 @@ def math_challenge_prime(): #The second challenge
     n = randint(10,20)
     print("Find the closest prime number to {}".format(n))
     c = int(input("Your answer : "))
+    while c<0 :
+        c = int(input("Please enter a positive integer : "))
     if c in nearest_prime(n) :
         print("Congrats! You deserve a key !")
         return True
