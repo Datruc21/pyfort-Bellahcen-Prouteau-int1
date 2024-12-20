@@ -5,7 +5,6 @@ from logical_challenges import *
 from pere_fouras_challenge import *
 from utility_functions import *
 
-introduction()
+team = introduction()
 
 
-choose_player(compose_team())
