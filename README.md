@@ -40,6 +40,6 @@
 #### 20/12 : game() done by Maël
 
 
-##known problems and/or solutions :
+## known problems and/or solutions :
 ####    -There's no handling in case of an error of type e.g. entering a string instead of an integer
 ####    -Otherwise, all inputs, as long as they have the correct type, are correctly secured
