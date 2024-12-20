@@ -18,7 +18,9 @@ def game (): # The main function, running the game
     print("Congrats for your keys, now it's time for the true challenge, the treasure room !\n")
     if treasure_room() : # It calls the final challenge and verifies if you won
         print("You won !!, here is your team !", team)
-    else : print("What a noob, not this time, maybe another day")
-    record_history(team) # Save the results of the team in a file
+        record_history(team, True)  # Save the results of the team in a file
+    else :
+        print("What a noob, not this time, maybe another day")
+        record_history(team, False) # Save the results of the team in a file
 
 game()
