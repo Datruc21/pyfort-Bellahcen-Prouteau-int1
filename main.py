@@ -11,6 +11,7 @@ def game ():
         player = choose_player(team)
         if challenges_menu()() :
             team[player]["keys_won"] += 1
+    print("Congrats for your keys, now it's time for the true challenge, the treasure room !")
     if treasure_room() :
         print("You won !!")
     else : print("What a noob, not this time")
