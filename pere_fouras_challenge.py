@@ -22,7 +22,6 @@ def pere_fouras_riddles():
     tries = 3
     riddles = load_ridles("Data/PFRiddles.json")
     challenge = choice(riddles)
-    print(challenge)
     print(challenge["question"])
     while tries>0 :
         answer1 = input("Answer : ")
