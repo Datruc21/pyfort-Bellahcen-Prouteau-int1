@@ -1,5 +1,5 @@
 """         PYFORT by Maël and Jalil
-The final challenge program handling the last trial
+The final challenge program handling the last trial (done by Maël)
 """
 
 from random import *
