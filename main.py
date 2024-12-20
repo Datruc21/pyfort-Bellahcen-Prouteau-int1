@@ -5,6 +5,7 @@ from logical_challenges import *
 from pere_fouras_challenge import *
 from utility_functions import *
 
-team = introduction()
+def game ():
+    team = introduction()
 
-
+game()
