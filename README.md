@@ -11,6 +11,9 @@
 ## Structure :
 ### This whole game is just a function, also made of function :
 #### 1. Introduction and creation of the team
+#### While you do not have 3 keys
+#### 2. The user chooses a player of the team
+#### 3.
 
 
 ## Functions : (The ones that are useful outside this program)
