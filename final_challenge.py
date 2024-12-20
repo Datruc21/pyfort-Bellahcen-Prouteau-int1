@@ -26,5 +26,3 @@ def treasure_room() :
                 print("Missed, number of tries left : {}, here is another hint : {}".format(tries, show["Clues"][-(tries+1)]))
             else : tries -= 1
         print("What a pity, the last hint was : {} and the answer was {}".format(show["Clues"][5],correct_answer))
-
-treasure_room()
