@@ -11,10 +11,10 @@ def game ():
         player = choose_player(team)
         if challenges_menu()() :
             team[player]["keys_won"] += 1
-    print("Congrats for your keys, now it's time for the true challenge, the treasure room !")
+            print("You now have : {} keys !\n".format(count_key(team)))
+    print("Congrats for your keys, now it's time for the true challenge, the treasure room !\n")
     if treasure_room() :
         print("You won !!, here is your team !", team)
     else : print("What a noob, not this time, maybe another day")
-
 
 game()
