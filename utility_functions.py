@@ -13,23 +13,24 @@ def introduction() :  # the function describing their goal for the player at the
     return compose_team()  # call the function to create the team
 
 def compose_team(): #create the team and return it (team)
+    team_name = input("Enter your team name :\n")
     player_number = int(input("Enter the number of player in your team (maximum 3): \n"))
     while 3<player_number<0 :
         player_number = int(input("You cannot have more than 3 players in your team : \n"))
-    team = []
+    team = [team_name]
     for i in range(player_number) :  # for every player, stores the information in a dictionary
         team.append({})
-        team[i]["name"] = input("Enter the name of this player :\n")
-        team[i]["profession"] = input("Enter its profession :\n")
-        team[i]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
-        team[i]["keys_won"] = 0
+        team[i+1]["name"] = input("Enter the name of this player :\n")
+        team[i+1]["profession"] = input("Enter its profession :\n")
+        team[i+1]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
+        team[i+1]["keys_won"] = 0
     leader_number = 0
-    for i in range (len(team)) :  # check whether the team has a leader
+    for i in range (1,len(team)) :  # check whether the team has a leader
         if team[i]["leader"]:
             leader_number = 1
             break
     if leader_number == 0 :
-        team[0]["leader"] = True  # If noone is the leader, by default set the first player as one
+        team[1]["leader"] = True  # If noone is the leader, by default set the first player as one
     return team
 
 def challenges_menu():  #A function displaying the different types of challenges available and returning the choice as an integer
@@ -37,19 +38,29 @@ def challenges_menu():  #A function displaying the different types of challenges
     return challenges_available[int(input(" 1.Mathematics challenge \n 2.Logical challenge \n 3.Chance challenge \n 4.Père Fouras' riddle\n")) - 1]
 
 def choose_player(team) : # A function asking to choose one player in the team to participate in the next challenge, returning the player place in the team
-    for i in range (len(team)) : # the loop is setting the leader state in their dico
+    for i in range (1,len(team)) : # the loop is setting the leader state in their dico
         if team[i]["leader"]:
             leader = "Leader"
         else:
             leader = "Member"
-        print("{}. {} ({}) {}".format(i+1, team[i]['name'], team[i]["profession"], leader))
-    return int(input("Enter the number of the player competing for the next trial : \n"))-1
+        print("{}. {} ({}) {}".format(i, team[i]['name'], team[i]["profession"], leader))
+    return int(input("Enter the number of the player competing for the next trial : \n"))
 
 def count_key(team) :
     keys = 0
-    for i in range(len(team)) : keys += team[i]["keys_won"]
+    for i in range(1,len(team)) : keys += team[i]["keys_won"]
     return keys
 
-def record_history(team) : # It adds in a file the history of the tries
+def record_history(team, result) : # It adds in a file the history of the tries
     with open ("history.txt", "a") as f1 :
-        f1.write(str(team) + "\n")
+        f1.write("Team name : " + team[0]+"\n"+"\n")
+        for i in range (1, len(team)) : # Store the stats of every player
+            f1.write("Player "+ str(i) +": \n")
+            f1.write("Name : "+ str(team[i]["name"] +  "\n"))
+            f1.write("Profession : " + str(team[i]["profession"] + "\n"))
+            f1.write("Role : ")
+            if team[i]["leader"]: f1.write("Leader" + "\n")
+            else: f1.write("Member" + "\n")
+            f1.write("keys : " + str(team[i]["keys_won"]) + "\n")
+            if result : f1.write("And it was a victory !")
+            else : f1.write("unfortunately not this time")

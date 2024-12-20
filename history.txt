@@ -1,0 +1,11 @@
+Team name : nerds
+Player 1: 
+Name : mael
+Profession : lkj
+Role : Leader
+keys : 2
+Player 2: 
+Name : jalil
+Profession : lkj
+Role : Member
+keys : 1
