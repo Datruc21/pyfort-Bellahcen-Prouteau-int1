@@ -3,14 +3,14 @@ THe maths challenge module (done by Jalil), used to give maths challenge to the 
 from random import *
 from utility_functions import *
 
-def factorial(n) : #The function that return the factorial of a number n
+def factorial(n) :
     """This function takes an integer as a parameter and return its factorial"""
     p = 1
     for i in range(1,n+1) :
         p *= i
     return p
 
-def math_challenge_factorial() :#The first challenge
+def math_challenge_factorial() :
     """Chooses a random number between 1 and 10, and ask the user for its factorial, if answer is
     correct, return True, else False"""
     n = randint(1,10)
