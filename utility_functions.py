@@ -19,13 +19,15 @@ def compose_team():
         player[i]["profession"] = input("Enter its profession :\n")
         player[i]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
         player[i]["keys_won"] = 0
-
     leader_number = 0
-    for i in range(player_number) : # We check whether there is one leader or not, we will keep the first one if there are many or designate the first player if there is noone.
-
-        if player[i]["leader"]: leader_number+=1
+    for i in range (len(player)) :
+        print(player)
+        if player[i]["leader"]:
+            leader_number = 1
+            break
     if leader_number == 0 :
-        player[0]['leader'] = True
+        player[1]["leader"] = True
+
 
     return player
 
@@ -35,7 +37,7 @@ def challenges_menu():
 
 def choose_player(team) :
     for i in range (len(team)) :
-        if team[i]["leader"] == True :
+        if team[i]["leader"] :
             leader = "Leader"
         else:
             leader = "Member"

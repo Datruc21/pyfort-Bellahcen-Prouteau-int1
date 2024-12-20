@@ -7,5 +7,5 @@ from utility_functions import *
 
 introduction()
 
-print(challenges_menu())
+
 choose_player(compose_team())
