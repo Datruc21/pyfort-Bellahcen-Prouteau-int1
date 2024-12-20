@@ -3,6 +3,10 @@ The utility functions program (done by Maël) handle every function being called
 """
 
 from random import *
+from math_challenges import *
+from logical_challenges import *
+from chance_challenges import *
+from pere_fouras_challenge import *
 
 def introduction() :  # the function describing their goal for the player at the beginning, returns the team
     print("Your goal is to get 3 keys to access the treasure room, in order to get them, you will have to complete challenges")
@@ -29,18 +33,19 @@ def compose_team(): #create the team and return it (team)
     return team
 
 def challenges_menu():  #A function displaying the different types of challenges available and returning the choice as an integer
-    challenges_available = ["Mathematics challenge", "Logic challenge", "Chance challenge", "Pere Fouras' riddle"]
-    return challenges_available[int(input(" 1.Mathematics challenge \n 2. Logic challenge \n 3. Chance challenge \n 4. Père Fouras' riddle\n")) - 1]
+    challenges_available = [math_challenge, battleship_game, chance_challenge, pere_fouras_riddles]
+    return challenges_available[int(input(" 1.Mathematics challenge \n 2.Logical challenge \n 3.Chance challenge \n 4.Père Fouras' riddle\n")) - 1]
 
-def choose_player(team) : # A function asking to choose one player in the team to participate in the next challenge, returning the player dictionary
+def choose_player(team) : # A function asking to choose one player in the team to participate in the next challenge, returning the player place in the team
     for i in range (len(team)) : # the loop is setting the leader state in their dico
         if team[i]["leader"]:
             leader = "Leader"
         else:
             leader = "Member"
         print("{}. {} ({}) {}".format(i+1, team[i]['name'], team[i]["profession"], leader))
-    return team[int(input("Enter the number of the player competing for the next trial : \n"))-1]
+    return int(input("Enter the number of the player competing for the next trial : \n"))-1
 
-def AddKey() :
-    global  key
-    key += 1
+def count_key(team) :
+    keys = 0
+    for i in range(len(team)) : keys += team[i]["keys_won"]
+    return keys
