@@ -133,5 +133,3 @@ def battleship_game() :
 
 
 
-
-
