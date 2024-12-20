@@ -1,35 +1,33 @@
+"""         PYFORT by Maël and Jalil
+The utility functions program handle the every function being called in the main program
+"""
+
 from random import *
 
-key = 0
 
-def introduction() :
+def introduction() :  # the function describing their goal for the player at the beginning
     print("Your goal is to get 3 keys to access the treasure room, in order to get them, you will have to complete challenges")
+    compose_team()  # call the function to create the team
 
-def AddKey() :
-    global  key
-    key += 1
-
-def compose_team():
+def compose_team(): #create the team and return it
     player_number = int(input("Enter the number of player in your team : \n"))
     while 3<player_number<0 :
         player_number = int(input("You cannot have more than 3 players in your team : \n"))
-    player = [{}, {}, {}]
+    team = [{}, {}, {}]
     for i in range(player_number) :
-        player[i]["name"] = input("Enter the name of this player :\n")
-        player[i]["profession"] = input("Enter its profession :\n")
-        player[i]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
-        player[i]["keys_won"] = 0
+        team[i]["name"] = input("Enter the name of this player :\n")
+        team[i]["profession"] = input("Enter its profession :\n")
+        team[i]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
+        team[i]["keys_won"] = 0
     leader_number = 0
-    for i in range (len(player)) :
-        print(player)
-        if player[i]["leader"]:
+    for i in range (len(team)) :
+        print(team)
+        if team[i]["leader"]:
             leader_number = 1
             break
     if leader_number == 0 :
-        player[1]["leader"] = True
-
-
-    return player
+        team[1]["leader"] = True
+    return team
 
 def challenges_menu():
     challenges_available = ["Mathematics challenge", "Logic challenge", "Chance challenge", "Pere Fouras's riddle"]
@@ -42,3 +40,7 @@ def choose_player(team) :
         else:
             leader = "Member"
         print("{}. {} ({}) {}".format(i+1, team[i]['name'], team[i]["profession"], leader))
+
+def AddKey() :
+    global  key
+    key += 1
