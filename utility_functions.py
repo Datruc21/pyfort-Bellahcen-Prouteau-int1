@@ -49,3 +49,7 @@ def count_key(team) :
     keys = 0
     for i in range(len(team)) : keys += team[i]["keys_won"]
     return keys
+
+def record_history(team) : # It adds in a file the history of the tries
+    with open ("history.txt", "a") as f1 :
+        f1.write(str(team) + "\n")
