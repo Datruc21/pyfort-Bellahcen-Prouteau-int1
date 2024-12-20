@@ -30,7 +30,7 @@
         "CODE-WORD": "HAT"
       },
       "Show 08": {
-        "Clues": ["GUTTER", "FISH", "GRASS", "TONGUE", "CAT", "SIAMESE"],
+        "Clues": ["GUTTER", "FISH", "GRASS", "TONGUE", "FELINE", "SIAMESE"],
         "CODE-WORD": "CAT"
       },
       "Show 09": {
@@ -128,7 +128,7 @@
     },
     "2018": {
       "Show 01": {
-        "Clues": ["WAR", "HEART", "LAST", "SHOUT", "ANIMALS", "PAIN"],
+        "Clues": ["WAR", "HEART", "LAST", "HOWLING", "ANIMALS", "PAIN"],
         "CODE-WORD": "SHOUT"
       },
       "Show 02": {
@@ -170,7 +170,7 @@
     },
     "2019": {
       "Show 01": {
-        "Clues": ["BEAUTIFUL", "SPIRITUAL", "FAMILY", "CHRISTMAS", "FATHER", "DAD"],
+        "Clues": ["BEAUTIFUL", "SPIRITUAL", "FAMILY", "CHRISTMAS", "WHIPPING", "DAD"],
         "CODE-WORD": "FATHER"
       },
       "Show 02": {
