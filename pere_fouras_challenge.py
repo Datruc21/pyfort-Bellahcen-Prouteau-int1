@@ -1,7 +1,10 @@
+"""         PYFORT by Maël and Jalil
+THe Père Fouras' challenge module (done by Jalil and Maël), enables to have access to one of the many riddles and (potentially) solve it """
 import json
 from random import *
 
 def load_ridles(file) :
+    """Load the file and put its content into a usable format (a list)"""
     with open(file, "r", encoding="utf-8") as f:
         data = json.load(f)
         L = []
@@ -14,6 +17,8 @@ def load_ridles(file) :
     return L
 
 def pere_fouras_riddles():
+    """Select a random riddle from the list previously created and show it to the player
+    The player can answer in with uppercase or lowercase letters (or both) and with or without "The " """
     tries = 3
     riddles = load_ridles("Data/PFRiddles.json")
     challenge = choice(riddles)
@@ -42,7 +47,6 @@ def pere_fouras_riddles():
         else :
             print("Wrong, try again")
         tries -= 1
-
     print("Tough luck, the answer was {}".format(challenge["answer"]))
     return False
 
