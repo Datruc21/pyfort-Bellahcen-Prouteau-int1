@@ -1,27 +1,27 @@
-PYFORT
+# PYFORT
 
-#Contributors : Jalil Bellahcen and Maël Prouteau (both responsible for the code, Jalil keeps the Readme.txt updated)
+## Contributors : Jalil Bellahcen and Maël Prouteau (both responsible for the code, Jalil keeps the Readme.txt updated)
 
-## A new kind of experience with this fort Boyard simulator, build your team and face many trials to take the win
-## KEEP ALL THE DOCUMENTS TOGETHER THEY'RE ALL IMPORTANT (I SWEAR)
+### A new kind of experience with this fort Boyard simulator, build your team and face many trials to take the win
+### KEEP ALL THE DOCUMENTS TOGETHER THEY'RE ALL IMPORTANT (I SWEAR)
 
-# Created in Python (libraries used : json,random)
-### To run the game, just run main.py
+## Created in Python (libraries used : json,random)
+#### To run the game, just run main.py
 
-# Structure :
+## Structure :
 ### This whole game is just a function, also made of function :
 #### 1. Introduction and creation of the team
 
 
-# Functions : (The ones that are useful outside this program)
-## Math module :
-###    -factorial(n : integer)--->integer : The function that returns the factorial of an integer n
-###    -is_prime(n : integer)--->Boolean : #Check whether a number n is prime or not
-###    -nearest_prime(n : integer)-->integer: a function that returns the nearest prime number to a number n
-## Logical module :
-###    -empty_grid() : Creates a matrix of " "
-## Père Fouras' riddles module :
-###    -load_ridles(file : string) : Load the content of file and put it in a list
+## Functions : (The ones that are useful outside this program)
+### Math module :
+####    -factorial(n : integer)--->integer : The function that returns the factorial of an integer n
+####    -is_prime(n : integer)--->Boolean : #Check whether a number n is prime or not
+####    -nearest_prime(n : integer)-->integer: a function that returns the nearest prime number to a number n
+### Logical module :
+####    -empty_grid() : Creates a matrix of " "
+### Père Fouras' riddles module :
+####    -load_ridles(file : string) : Load the content of file and put it in a list
 
 
 
