@@ -49,7 +49,7 @@ def nearest_prime(n): #a function that return the nearest prime number to a numb
         return [c, n-dis]
     return [c,"none"]
 
-def math_challenge_prime(): #The second challenge
+def math_challenge_prime():
     """Chooses a random number between 10 and 20 and ask the nearest prime number (if there's two answers, both will
     be considered correct) return True if the answer is correct, else False"""
     n = randint(10,20)
@@ -63,7 +63,7 @@ def math_challenge_prime(): #The second challenge
     print("What a pity, it's wrong!")
     return False
 
-def math_roulette_challenge(): # The third math challenge
+def math_roulette_challenge():
     """Chooses one symbol randomly and a list of 5 random integers between 1 and 20
      Ask the user to compute the operation associated with the selected symbol
     If it's a subtraction with [a,b,c,d,e] the expected result will be a-b-c-d-e
