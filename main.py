@@ -13,8 +13,8 @@ def game ():
             team[player]["keys_won"] += 1
     print("Congrats for your keys, now it's time for the true challenge, the treasure room !")
     if treasure_room() :
-        print("You won !!")
-    else : print("What a noob, not this time")
+        print("You won !!, here is your team !", team)
+    else : print("What a noob, not this time, maybe another day")
 
 
 game()
