@@ -1,3 +1,7 @@
+"""         PYFORT by Maël and Jalil
+The chance challenges program handle the 2 challenges dealing with our chance
+"""
+
 from random import*
 
 def shell_game() :
