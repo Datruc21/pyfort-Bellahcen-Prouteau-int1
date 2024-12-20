@@ -19,5 +19,6 @@ def game (): # The main function, running the game
     if treasure_room() : # It calls the final challenge and verifies if you won
         print("You won !!, here is your team !", team)
     else : print("What a noob, not this time, maybe another day")
+    record_history(team) # Save the results of the team in a file
 
 game()
