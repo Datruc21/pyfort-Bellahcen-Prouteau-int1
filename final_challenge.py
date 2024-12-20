@@ -6,7 +6,7 @@ from random import *
 from utility_functions import*
 import json
 def treasure_room() :                   #The main function simulating the trial, it will just return the result
-    with open("Data\TRClues.json", "r", encoding="utf-8") as f:
+    with open("Data/TRClues.json", "r", encoding="utf-8") as f:
         tv_game = json.load(f)
         year = str(randint(2015,2019))
         D = tv_game["Fort Boyard"][year]
