@@ -9,11 +9,14 @@
 #### To run the game, just run main.py
 
 ## Structure :
-### This whole game is just a function, also made of function :
+### This whole game is just a function, also made of functions :
 #### 1. Introduction and creation of the team
 #### While you do not have 3 keys
 #### 2. The user chooses a player of the team
-#### 3.
+#### 3. The user can choose a category of game, and a random one from this category will be chosen
+#### 4. In case of a win, the chosen player will get one key
+#### 5. After obtaining 3 keys, the final challenge is enabled
+#### 6. If the final challenge is completed, it's a win, and the team will be registered in a file
 
 
 ## Functions : (The ones that are useful outside this program)
@@ -40,7 +43,7 @@
 #### 10/12 : riddles module truly finished by Maël
 #### 19/12 : finished final challenge module by Maël
 #### 20/12 : documenting and optimising every module (everyone documented its own modules)
-#### 20/12 : game() done by Maël
+#### 20/12 : main.py done by Maël
 
 
 ## known problems and/or solutions :
