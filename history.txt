@@ -1,0 +1,79 @@
+Team name : viviteam
+
+Player 1: 
+Name : yan
+Profession : student
+Role : Member
+keys : 1
+Player 2:
+Name : vincent
+Profession : builder
+Role : Leader
+keys : 2
+unfortunately not this time
+
+Team name : maelteam
+
+Player 1: 
+Name : mael
+Profession : student
+Role : Leader
+keys : 2
+Player 2: 
+Name : vincent
+Profession : builder
+Role : Member
+keys : 1
+And it was a victory !
+
+Team name : lastTry
+
+Player 1: 
+Name : mael
+Profession : hey
+Role : Member
+keys : 1
+Player 2: 
+Name : vincent
+Profession : builder
+Role : Leader
+keys : 2
+unfortunately not this time 
+ 
+Team name : verylasttry
+
+Player 1: 
+Name : mael
+Profession : stu
+Role : Leader
+keys : 3
+Player 2: 
+Name : vicent
+Profession : build
+Role : Member
+keys : 0
+unfortunately not this time 
+ 
+Team name : aiec'estdur
+
+Player 1: 
+Name : mael
+Profession : stu
+Role : Leader
+keys : 2
+Player 2: 
+Name : vicne
+Profession : nono
+Role : Member
+keys : 1
+unfortunately not this time 
+ 
+Team name : lkj
+
+Player 1: 
+Name : mael
+Profession : stu
+Role : Leader
+keys : 3
+And it was a victory ! 
+ 

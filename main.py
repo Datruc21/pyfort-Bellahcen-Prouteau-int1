@@ -15,9 +15,26 @@ def game (): # The main function, running the game
         if challenges_menu()() :  #It verifies if you won for the challenge chosen (see utility function)
             team[player]["keys_won"] += 1
             print("You now have : {} keys !\n".format(count_key(team)))
+            print_chest(count_key(team)) # Calls a function to display a part of the chest
     print("Congrats for your keys, now it's time for the true challenge, the treasure room !\n")
     if treasure_room() : # It calls the final challenge and verifies if you won
         print("You won !!, here is your team !", team)
+        print("""
+                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⠀⠈⠙⢿⣿⣿⣿⣿⠟⢁⣠⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠈⠻⣿⣧⡾⠟⠉⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⣀⣤⡶⠟⠋⠁⠀⠀⠀⠀⣀⣄⡉⠛⠿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠞⠋⠁⠀⠀⠀⠀⣀⣤⣶⠿⠛⢉⣠⡴⠾⠛⣿⣤⣿⣿
+                ⣿⣛⠋⢩⣷⠟⠋⢁⣤⣄⡀⠀⣀⣤⣶⠿⠛⠉⣠⣴⠾⠛⠁⠀⠀⠀⠸⣿⣿⣿
+                ⣿⣿⣿⣾⠛⠷⣦⣄⡈⠙⠿⡿⠟⠋⣀⣤⡶⠟⠋⠀⠀⠀⠀⠀⠀⢀⣤⣿⣿⣿
+                ⣿⣿⣿⠇⠀⠀⠀⠉⠛⠷⣦⣤⡶⠟⠋⠁⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿
+                ⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⢸⡏⠀⠀⠀⠀⠀⢀⣠⣴⠾⠛⠉⠀⠙⢿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⢸⡇⠀⢀⣠⣴⠾⠛⠉⣤⣤⣀⣀⡀⠀⠈⢻⣿⣿⣿
+                ⣿⣿⣿⣿⣿⡿⠉⠻⢷⣤⣼⣧⣶⣟⠋⠁⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣧⣶⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿""")
         record_history(team, True)  # Save the results of the team in a file
     else :
         print("What a noob, not this time, maybe another day")

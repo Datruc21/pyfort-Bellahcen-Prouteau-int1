@@ -46,10 +46,17 @@ def choose_player(team) : # A function asking to choose one player in the team t
         print("{}. {} ({}) {}".format(i, team[i]['name'], team[i]["profession"], leader))
     return int(input("Enter the number of the player competing for the next trial : \n"))
 
-def count_key(team) :
+def count_key(team) : # A function that return the total number of keys earn in the team
     keys = 0
     for i in range(1,len(team)) : keys += team[i]["keys_won"]
     return keys
+
+def print_chest(keys) : # A function that display a part of the treasure chest
+    with open("Chest.txt", "r") as f1 :
+        chest = f1.readlines()
+        for i in range (keys*6) : #Display lines by multiple of 6
+            print(chest[i], end="")
+        print("\n The treasure seams to be closer now ...")
 
 def record_history(team, result) : # It adds in a file the history of the tries
     with open ("history.txt", "a") as f1 :
@@ -62,5 +69,5 @@ def record_history(team, result) : # It adds in a file the history of the tries
             if team[i]["leader"]: f1.write("Leader" + "\n")
             else: f1.write("Member" + "\n")
             f1.write("keys : " + str(team[i]["keys_won"]) + "\n")
-            if result : f1.write("And it was a victory !")
-            else : f1.write("unfortunately not this time")
+        if result : f1.write("And it was a victory ! \n \n")
+        else : f1.write("unfortunately not this time \n \n")
