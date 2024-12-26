@@ -51,3 +51,4 @@
 ## known problems and/or solutions :
 ####    -There's no handling in case of an error of type e.g. entering a string instead of an integer
 ####    -Otherwise, all inputs, as long as they have the correct type, are correctly secured
+####    (for example, if you're asked to enter a number between 0 and 3, you won't be able to put 4 or -1)
