@@ -15,14 +15,14 @@ def introduction() :  # the function describing their goal for the player at the
 def compose_team(): #create the team and return it (team)
     team_name = input("Enter your team name :\n")
     player_number = int(input("Enter the number of player in your team (maximum 3): \n"))
-    while 3<player_number<0 :
-        player_number = int(input("You cannot have more than 3 players in your team : \n"))
+    while player_number<=0 or 3<player_number:
+        player_number = int(input("You cannot have more than 3 (or less than 1) players in your team : \n"))
     team = [team_name]
     for i in range(player_number) :  # for every player, stores the information in a dictionary
         team.append({})
         team[i+1]["name"] = input("Enter the name of this player :\n")
-        team[i+1]["profession"] = input("Enter its profession :\n")
-        team[i+1]["leader"] = input("Is it the leader ? Enter yes if this person is.\n") == 'yes'
+        team[i+1]["profession"] = input("Enter their profession :\n")
+        team[i+1]["leader"] = input("Are they the leader ? Enter yes if this person is.\n") == 'yes'
         team[i+1]["keys_won"] = 0
     leader_number = 0
     for i in range (1,len(team)) :  # check whether the team has a leader
@@ -44,7 +44,10 @@ def choose_player(team) : # A function asking to choose one player in the team t
         else:
             leader = "Member"
         print("{}. {} ({}) {}".format(i, team[i]['name'], team[i]["profession"], leader))
-    return int(input("Enter the number of the player competing for the next trial : \n"))
+    chosen = (int(input("Enter the number of the player competing for the next trial : \n")))
+    while chosen not in range(1,len(team)) :
+        chosen = (int(input("Enter a valid number for the player competing in the next trial : \n")))
+    return chosen
 
 def count_key(team) : # A function that return the total number of keys earn in the team
     keys = 0
@@ -52,11 +55,12 @@ def count_key(team) : # A function that return the total number of keys earn in 
     return keys
 
 def print_chest(keys) : # A function that display a part of the treasure chest
+    prints = {1:"\nThe treasure seems to be closer now ...", 2: "\nEven closer now !", 3 : "\nOne last push !"}
     with open("Chest.txt", "r") as f1 :
         chest = f1.readlines()
         for i in range (keys*6) : #Display lines by multiple of 6
             print(chest[i], end="")
-        print("\n The treasure seams to be closer now ...")
+        print(prints[keys])
 
 def record_history(team, result) : # It adds in a file the history of the tries
     with open ("history.txt", "a") as f1 :

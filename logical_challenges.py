@@ -106,6 +106,16 @@ def has_won(player_shots_grid):
 def battleship_game() :
     """Coordinates all the functions above to create a complete game of battleship
     Return True if the player wins, False otherwise"""
+    print("-----------------------------------------------------",end="")
+    print(r"""
+__________         __    __  .__                .__    .__        
+\______   \_____ _/  |__/  |_|  |   ____   _____|  |__ |__|_____  
+ |    |  _/\__  \\   __\   __\  | _/ __ \ /  ___/  |  \|  \____ \ 
+ |    |   \ / __ \|  |  |  | |  |_\  ___/ \___ \|   Y  \  |  |_> >
+ |______  /(____  /__|  |__| |____/\___  >____  >___|  /__|   __/ 
+        \/      \/                     \/     \/     \/   |__|    """)
+    print("-----------------------------------------------------")
+
     Game = True
     print("Each player must place 2 boats on a 3x3 grid.\nBoats are represented by 'B' and missed shots by '.'.\nSunk boats are marked by 'x'.")
     player_grid = initialize()

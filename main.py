@@ -7,6 +7,7 @@ from math_challenges import *
 from logical_challenges import *
 from pere_fouras_challenge import *
 from utility_functions import *
+battleship_game()
 
 def game (): # The main function, running the game
     team = introduction()
@@ -16,7 +17,8 @@ def game (): # The main function, running the game
             team[player]["keys_won"] += 1
             print("You now have : {} keys !\n".format(count_key(team)))
             print_chest(count_key(team)) # Calls a function to display a part of the chest
-    print("Congrats for your keys, now it's time for the true challenge, the treasure room !\n")
+    print("Congrats for getting your keys, now it's time for the true challenge, the treasure room !\n")
+    print("Now, try to guess the password :")
     if treasure_room() : # It calls the final challenge and verifies if you won
         print("You won !!, here is your team !", team)
         print("""

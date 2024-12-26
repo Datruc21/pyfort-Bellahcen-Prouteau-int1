@@ -35,6 +35,7 @@
 
 
 
+
 ## Logbook :
 #### 2/12 : starting the project
 #### 3/12 : Creating the first modules, maths module is done by Jalil
@@ -44,6 +45,7 @@
 #### 19/12 : finished final challenge module by Maël
 #### 20/12 : documenting and optimising every module (everyone documented its own modules)
 #### 20/12 : main.py done by Maël
+#### 26/12 : Bug hunt and polishing the modules (adding ascii for example)
 
 
 ## known problems and/or solutions :
