@@ -20,7 +20,7 @@ def empty_grid() :
     return grid
 
 def display_grid(grid, message) :
-    """Show a grid to the player, with a message"""
+    """Show a grid to the player with a message, no return"""
     print(message)
     print("-------------")
     for i in range(len(grid)) :
@@ -59,12 +59,12 @@ def initialize() :
 def turn(player, player_shots_grid, opponent_grid) :
     """Proceed with either the player's turn or the game master's
     Either way, one will pick 2 integers and shoot at those coordinates
-    Verify on the target's grid if it's a hit or a missed"""
+    Verify on the target's grid if it's a hit or a miss"""
     if player == 0 : #player's turn
         display_grid(player_shots_grid,"History of your previous shots:")
         print("Your turn captain !")
         a, b = ask_positions()
-        while opponent_grid[a-1][b-1] == "X" or opponent_grid[a-1][b-1] == "." :
+        while opponent_grid[a-1][b-1] == "X" or opponent_grid[a-1][b-1] == "." : #To make sure you cannot shoot twice at the same spot
             print("You already shot here !")
             a,b = ask_positions()
         if opponent_grid[a-1][b-1] == "B" :
