@@ -11,6 +11,8 @@ def shell_game() :   # the function organizing the shell game, returning the res
     key_position = 0
     for i in range (1,3):
         player_choice = input("Enter your choice : ")
+        while len(player_choice) != 1 :
+            player_choice = input("Enter a single character please : ")
         if ord("a") <= ord(player_choice) <= ord("c"): player_choice = chr(ord(player_choice) - 32) #transforming the input in uppercase letter
         while player_choice not in L :  # securing the input
             player_choice = input("Your choice was invalid, please enter a value being either A, B or C")
