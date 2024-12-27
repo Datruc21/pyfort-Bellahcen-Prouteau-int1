@@ -7,14 +7,14 @@ def load_ridles(file) :
     """Load the file and put its content into a usable format (a list), then return it"""
     with open(file, "r", encoding="utf-8") as f:
         data = json.load(f)
-        L = []
+        content = []
         for i in data :
             d = {}
             for key in i.keys() :
                 if key == "question" or key == "answer" :
                     d[key] = i[key]
-            L.append(d)
-    return L
+            content.append(d)
+    return content
 
 def pere_fouras_riddles():
     """Select a random riddle from the list previously created and show it to the player
@@ -41,8 +41,8 @@ def pere_fouras_riddles():
         if "the " not in answer2 and answer2 == question :  #answer et answer
             print("Correct, you win a key !")
             return True
-        elif "the " in answer2 and question in answer2 and abs(len(answer2)-4-len(question)) == 0 :
-            print("Correct, you win a key !")
+        elif "the " in answer2 and question in answer2 and abs(len(answer2)-4-len(question)) == 0 : #if there's "the ", last two conditions tell us whether
+            print("Correct, you win a key !")#                                                     the part without "the " is the correct answer
             return True
         else :
             print("Wrong, try again")
