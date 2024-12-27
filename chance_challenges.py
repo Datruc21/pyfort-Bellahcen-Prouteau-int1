@@ -45,7 +45,7 @@ def roll_dice_game() :  # The function handling the dice game, returning the res
     print("None of you won, it is a draw, you won't have a key this time")
     return False
 
-def chance_challenge() :
+def chance_challenge() : #Choose a random game and return True if it is won, False otherwise
     challenges = [shell_game, roll_dice_game]
     c =  challenges[randint(0,1)]
     if c() :
