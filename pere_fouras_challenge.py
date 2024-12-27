@@ -4,7 +4,7 @@ import json
 from random import *
 
 def load_ridles(file) :
-    """Load the file and put its content into a usable format (a list)"""
+    """Load the file and put its content into a usable format (a list), then return it"""
     with open(file, "r", encoding="utf-8") as f:
         data = json.load(f)
         L = []
@@ -18,7 +18,8 @@ def load_ridles(file) :
 
 def pere_fouras_riddles():
     """Select a random riddle from the list previously created and show it to the player
-    The player can answer in with uppercase or lowercase letters (or both) and with or without "The " """
+    The player can answer in with uppercase or lowercase letters (or both) and with or without "The "
+     Return True if the game is won, False otherwise"""
     tries = 3
     riddles = load_ridles("Data/PFRiddles.json")
     challenge = choice(riddles)
