@@ -28,8 +28,7 @@ def compose_team(): #create the team and return it (team)
     for i in range (1,len(team)) :  # check whether the team has a leader
         if team[i]["leader"]:
             leader_number = 1
-            break
-    if leader_number == 0 :
+    if not leader_number :
         team[1]["leader"] = True  # If noone is the leader, by default set the first player as one
     return team
 
@@ -45,16 +44,16 @@ def choose_player(team) : # A function asking to choose one player in the team t
             leader = "Member"
         print("{}. {} ({}) {}".format(i, team[i]['name'], team[i]["profession"], leader))
     chosen = (int(input("Enter the number of the player competing for the next trial : \n")))
-    while chosen not in range(1,len(team)) :
+    while chosen not in range(1,len(team)) : #To secure the input, so there won't be problem after with the distribution of keys
         chosen = (int(input("Enter a valid number for the player competing in the next trial : \n")))
     return chosen
 
-def count_key(team) : # A function that return the total number of keys earn in the team
+def count_key(team) : # A function that returns the total number of keys earn in the team
     keys = 0
     for i in range(1,len(team)) : keys += team[i]["keys_won"]
     return keys
 
-def print_chest(keys) : # A function that display a part of the treasure chest
+def print_chest(keys) : # A function that displays a part of the treasure chest
     prints = {1:"\nThe treasure seems to be closer now ...", 2: "\nEven closer now !", 3 : "\nOne last push !"}
     with open("Chest.txt", "r") as f1 :
         chest = f1.readlines()
@@ -74,4 +73,4 @@ def record_history(team, result) : # It adds in a file the history of the tries
             else: f1.write("Member" + "\n")
             f1.write("keys : " + str(team[i]["keys_won"]) + "\n")
         if result : f1.write("And it was a victory ! \n \n")
-        else : f1.write("unfortunately not this time \n \n")
+        else : f1.write("Unfortunately not this time, maybe in a next life... \n \n")
