@@ -15,24 +15,19 @@
 #### 2. The user chooses a player of the team
 #### 3. The user can choose a category of game, and a random one from this category will be chosen
 #### 4. In case of a win, the chosen player will get one key
-#### 5. After obtaining 3 keys, the final challenge is enabled
-#### 6. If the final challenge is completed, it's a win, and the team will be registered in a file
+#### 5. After obtaining 3 keys, the final challenge is unlocked
+#### 6. If the final challenge is completed, it's a win, and the team will be registered in a file (even if it's a failure so be careful)
 
 
 ## Functions : (The ones that are useful outside this program)
 ### Math module :
 ####    -factorial(n : integer)--->integer : The function that returns the factorial of an integer n
 ####    -is_prime(n : integer)--->Boolean : #Check whether a number n is prime or not
-####    -nearest_prime(n : integer)-->integer: a function that returns the nearest prime number to a number n
+####    -nearest_prime(n : integer)--->integer: a function that returns the nearest prime number to a number n
 ### Logical module :
 ####    -empty_grid() : Creates a matrix of " "
 ### Père Fouras' riddles module :
 ####    -load_ridles(file : string) : Load the content of file and put it in a list
-
-
-
-
-
 
 
 
@@ -45,10 +40,16 @@
 #### 19/12 : finished final challenge module by Maël
 #### 20/12 : documenting and optimising every module (everyone documented its own modules)
 #### 20/12 : main.py done by Maël
-#### 26/12 : Bug hunt and polishing the modules (adding ascii for example)
+#### 26/12 : Bug hunt and polishing the modules (adding ascii for example, or optimisation)
 
 
-## known problems and/or solutions :
-####    -There's no handling in case of an error of type e.g. entering a string instead of an integer
+## Known problems and/or solutions :
+####    -There's no handling in case of an error of type e.g. entering a string instead of an integer.
 ####    -Otherwise, all inputs, as long as they have the correct type, are correctly secured
-####    (for example, if you're asked to enter a number between 0 and 3, you won't be able to put 4 or -1)
+####    (for example, if you're asked to enter a number between 0 and 3, you won't be able to put 4 or -1).
+
+
+## Test strategies :
+####    - Always try the input, if we're asked a number in a specific range, try outside it.
+####      For a character, always try a string of several characters.
+####      Following those tests, a lot of lines of code meant for input verification were added.
