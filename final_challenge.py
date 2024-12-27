@@ -5,12 +5,12 @@ The final challenge program handling the last trial (done by Maël)
 from random import *
 from utility_functions import*
 import json
-def treasure_room() :                   #The main function simulating the trial, it will just return the result
+def treasure_room() : #The main function simulating the trial, it will return the result, and True if the player wins, False otherwise
     with open("Data/TRClues.json", "r", encoding="utf-8") as f:
         tv_game = json.load(f)
         year = str(randint(2015,2019))
-        D = tv_game["Fort Boyard"][year]
-        show = D[choice(list(D.keys()))]
+        season = tv_game["Fort Boyard"][year]
+        show = season[choice(list(season.keys()))]
         remaining_clues = show["Clues"]   #saving the clues which were not displayed yet to choose a random one each time next line
         print("Clues:\n-{}\n-{}\n-{}".format(remaining_clues.pop(randint(0,len(remaining_clues)-1)),remaining_clues.pop(randint(0,len(remaining_clues)-1)),remaining_clues.pop(randint(0,len(remaining_clues)-1))))
         correct_answer = show["CODE-WORD"]
