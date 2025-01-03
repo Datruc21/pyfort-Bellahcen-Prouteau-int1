@@ -63,12 +63,12 @@ def record_history(team, result) : # It adds in a file the history of the tries
         f1.write("Team name : " + team[0]+"\n"+"\n")
         for i in range (1, len(team)) : # Store the stats of every player
             f1.write("Player "+ str(i) +": \n")
-            f1.write("Name : "+ str(team[i]["name"] +  "\n"))
-            f1.write("Profession : " + str(team[i]["profession"] + "\n"))
-            f1.write("Role : ")
+            f1.write("\tName : "+ str(team[i]["name"] +  "\n"))
+            f1.write("\tProfession : " + str(team[i]["profession"] + "\n"))
+            f1.write("\tRole : ")
             if team[i]["leader"]: f1.write("Leader" + "\n")
             else: f1.write("Member" + "\n")
-            f1.write("keys : " + str(team[i]["keys_won"]) + "\n")
+            f1.write("\tKeys : " + str(team[i]["keys_won"]) + "\n")
         if result : f1.write("And it was a victory ! \n \n")
         else : f1.write("Unfortunately not this time, maybe in a next life... \n \n")
 
