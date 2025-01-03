@@ -4,6 +4,9 @@ The main file (done by Maël), is used to run the game"""
 from chance_challenges import *
 from final_challenge import *
 from utility_functions import *
+from pere_fouras_challenge import *
+from logical_challenges import *
+from math_challenges import *
 
 def game (): # The main function, running the game
     team = introduction()
