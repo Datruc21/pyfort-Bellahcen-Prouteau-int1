@@ -19,7 +19,13 @@ def game (): # The main function, running the game
     print("Congrats for getting your keys, now it's time for the true challenge, the treasure room !\n")
     print("Now, try to guess the password :")
     if treasure_room() : # It calls the final challenge and verifies if you won
-        print("You won !!, here is your team !", team)
+        print("You won !!, here is your team !")
+        for i in range(1, len(team)):  # the loop is setting the leader state in their dico and displaying the team
+            if team[i]["leader"]:
+                leader = "Leader"
+            else:
+                leader = "Member"
+            print("{}. {} ({}) {}".format(i, team[i]['name'], team[i]["profession"], leader))
         print("""
                 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
                 ⣿⣿⣿⣿⣿⣿⣿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿

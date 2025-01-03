@@ -34,7 +34,7 @@ def compose_team(): #create the team and return it (team)
 
 
 def choose_player(team) : # A function asking to choose one player in the team to participate in the next challenge, returning the player place in the team
-    for i in range (1,len(team)) : # the loop is setting the leader state in their dico
+    for i in range (1,len(team)) : # the loop is setting the leader state in their dico and displaying the team
         if team[i]["leader"]:
             leader = "Leader"
         else:
