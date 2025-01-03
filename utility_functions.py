@@ -32,9 +32,6 @@ def compose_team(): #create the team and return it (team)
         team[1]["leader"] = True  # If noone is the leader, by default set the first player as one
     return team
 
-def challenges_menu():  #A function displaying the different types of challenges available and returning the choice as an integer
-    challenges_available = [math_challenge, battleship_game, chance_challenge, pere_fouras_riddles]
-    return challenges_available[int(input(" 1.Mathematics challenge \n 2.Logical challenge \n 3.Chance challenge \n 4.Père Fouras' riddle\n")) - 1]
 
 def choose_player(team) : # A function asking to choose one player in the team to participate in the next challenge, returning the player place in the team
     for i in range (1,len(team)) : # the loop is setting the leader state in their dico
@@ -74,3 +71,4 @@ def record_history(team, result) : # It adds in a file the history of the tries
             f1.write("keys : " + str(team[i]["keys_won"]) + "\n")
         if result : f1.write("And it was a victory ! \n \n")
         else : f1.write("Unfortunately not this time, maybe in a next life... \n \n")
+
