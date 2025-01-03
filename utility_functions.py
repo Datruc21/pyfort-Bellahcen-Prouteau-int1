@@ -72,3 +72,12 @@ def record_history(team, result) : # It adds in a file the history of the tries
         if result : f1.write("And it was a victory ! \n \n")
         else : f1.write("Unfortunately not this time, maybe in a next life... \n \n")
 
+def challenges_menu():  #A function displaying the different types of challenges available and returning the choice as an integer
+    challenges_available = [math_challenge, battleship_game, chance_challenge, pere_fouras_riddles]
+    number = int(input(" 1.Mathematics challenge \n 2.Logical challenge \n 3.Chance challenge \n 4.Père Fouras' riddle\nEnter the number of the challenge you wanna try : "))
+    while number not in [1,2,3,4] :
+        number = int(input("Enter a valid number : "))
+    return challenges_available[number - 1]
+
+def display_team(team) :
+    pass
