@@ -78,6 +78,3 @@ def challenges_menu():  #A function displaying the different types of challenges
     while number not in [1,2,3,4] :
         number = int(input("Enter a valid number : "))
     return challenges_available[number - 1]
-
-def display_team(team) :
-    pass
