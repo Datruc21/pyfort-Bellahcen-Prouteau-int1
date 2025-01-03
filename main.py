@@ -4,7 +4,6 @@ The main file (done by Maël), is used to run the game"""
 from chance_challenges import *
 from final_challenge import *
 from utility_functions import *
-battleship_game()
 
 def game (): # The main function, running the game
     team = introduction()
